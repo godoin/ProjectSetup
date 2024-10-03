@@ -1,18 +1,5 @@
-# General
-*.log
-*.cache
-*.swp
-*~
+# Ignore all by default
+*
 
-# IDE/Text Editor specific
-.vscode/
-
-# Operating System generated files
-.DS_Store
-Thumbs.db
-
-# Environment variables
-.env
-
-# Uploaded files (if applicable)
-/assets/uploads/*
+# Allow only READMEs
+!README-*
