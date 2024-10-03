@@ -37,6 +37,12 @@ This commit adds a new API endpoint to store user data which is accessible at /a
 Closes #{issue-number}
 ```
 
+Bad examples:
+```
+fix(coffee): I may need to rethink my caffeine intake.
+```
 
-# References
-For more detailed
+**References**
+For more detailed information, please refer to the Conventional Commits Specification.
+
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) 
