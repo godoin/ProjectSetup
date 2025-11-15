@@ -1,0 +1,454 @@
+/* Block Button */
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.7em 0.9em;
+	border: none;
+	cursor: pointer;
+	border-radius: 1.8em;
+	white-space: nowrap;
+	gap: 0.4em;
+	max-width: 12em;
+	font-family: Inconsolata, Inter, sans-serif;
+	font-weight: 500;
+	color: var(--white);
+	transition: 0.3s;
+}
+
+/* Elements */
+.button__icon {
+	padding: 0.5em;
+	border-radius: 0.2em;
+	background-color: transparent;
+	position: relative;
+}
+
+.button__text {
+  /* Text inside button */
+}
+
+/* Modifiers */
+.button--primary {
+	background-color: var(--primary);
+}
+
+.button--secondary {
+	background-color: var(--gray-50);
+	color: var(--teal-700);
+}
+
+.button--tertiary {
+	color: var(--gray-400);
+}
+
+.button--tertiary:hover {
+	background-color: var(--gray-200);
+	color: var(--gray-500);
+}
+
+.button--outline {
+	background-color: var(--gray-100);
+	color: var(--gray-500);
+	border: 1px solid var(--gray-300);
+}
+
+.button--glass {
+	background-color: var(--glass-bg);
+	backdrop-filter: var(--glass-backdrop);
+}
+
+.button--glass:hover {
+	background-color: var(--glass-hover);
+}
+
+.button--ghost {
+	background-color: transparent;
+	color: var(--black);
+}
+
+.button:disabled {
+	color: var(--white);
+	opacity: 0.8;
+	cursor: not-allowed;
+}
+
+.button:hover,
+.button.active {
+	background-color: var(--gray-300);
+}
+
+/* Block: Badge */
+.badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.2em 0.5em;
+	border: 1px solid var(--black);
+	border-radius: 0.2em;
+	font-size: 0.8rem;
+	color: var(--black);
+	background-color: transparent;
+	cursor: default;
+	transition: 0.3s;
+}
+
+.badge--error {
+	color: var(--error); 
+}
+
+.badge--info {
+	color: var(--info);
+}
+
+.badge--success {
+	color: var(--success);
+}
+
+.badge--warning {
+	color: var(--warning);
+}
+
+.badge:hover {
+	background-color: transparent; 
+	cursor: pointer;
+}
+
+/* Block: Icon */
+.icon {
+	display: inline-flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+
+.ghost {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5em;
+	border-radius: 0.2em;
+	background-color: transparent;
+	color: var(--black);
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.outline {
+	color: var(--gray-500);
+	border: 1px solid var(--gray-300);
+}
+
+
+/* Block: Status */
+.status {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+}
+
+/* Element: Icon inside status */
+.status__icon {
+	min-width: 0.6em;
+	min-height: 0.6em;
+	border-radius: 100%;
+}
+
+/* Modifiers for icon status */
+.status__icon--success {
+	background-color: var(--success);
+}
+
+.status__icon--warning {
+	background-color: var(--warning);
+}
+
+.status__icon--error {
+	background-color: var(--error);
+}
+
+.status__icon--info {
+	background-color: var(--info);
+}
+
+/* Block: Message */
+.message {
+	display: none;
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Modifier to show active message */
+.message--active {
+	display: flex;
+}
+
+/* Block: Main message container */
+.message-main {
+	padding: 0.8em;
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 0.4em;
+}
+
+/* Active main message */
+.message-main--active {
+	display: flex;
+}
+
+/* Group inside main message */
+.message-main__group {
+	display: flex;
+	align-items: center;
+	gap: 0.4em;
+}
+
+/* Icon inside main message group */
+.message-main__group-icon {
+	aspect-ratio: 1/1;
+	object-fit: contain;
+	object-position: center;
+}
+
+/* Modifiers for main message types */
+.message-main--error {
+	border: 1px solid var(--error-border);
+	background-color: var(--error-bg);
+	color: var(--error-text);
+}
+
+.message-main--info {
+	border: 1px solid var(--info-border);
+	background-color: var(--info-bg);
+	color: var(--info-text);
+}
+
+.message-main--warning {
+	border: 1px solid var(--warning-border);
+	background-color: var(--warning-bg);
+	color: var(--warning-text);
+}
+
+.message-main--success {
+	border: 1px solid var(--success-border);
+	background-color: var(--success-bg);
+	color: var(--success-text);
+}
+
+/* Text inside message */
+.message__text--error {
+	color: var(--error-text);
+}
+
+.message__text--info {
+	color: var(--info-text);
+}
+
+.message__text--warning {
+	color: var(--warning-text);
+}
+
+.message__text--success {
+	color: var(--success-text);
+}
+
+
+/* Block: Toast */
+.toast {
+	z-index: 1;
+	position: fixed;
+	top: 5em;
+	right: -20em;
+	min-width: 18em;
+	max-width: 18em;
+	padding: 0.5em;
+	border-radius: 0.6em;
+	border: 1px solid var(--gray-300);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.4em;
+	transition: right 0.3s ease;
+}
+
+/* Modifiers for toast states */
+.toast--active {
+  right: 1em; /* Adjust visible position */
+}
+
+.toast--default {
+	background-color: var(--gray-50);
+	color: var(--gray-900);
+	border: 1px solid var(--gray-300);
+}
+
+/* Icon color for default toast */
+.toast--default .toast__icon {
+	color: var(--gray-700);
+}
+
+.toast--progress .toast__icon {
+	-webkit-animation: 2s linear infinite spin;
+	animation: 2s linear infinite spin;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+/* Elements */
+.toast__group {
+	display: flex;
+	gap: 0.4em;
+	align-items: center;
+}
+
+.toast__message {
+	display: flex;
+	color: var(--zinc-900);
+	font-size: 0.9rem;
+}
+
+.toast__icon {
+	font-size: 1.2em;
+}
+
+/* Example icons */
+.toast__icon--success {
+	color: var(--success-text);
+}
+
+.toast__icon--close {
+	color: var(--zinc-400);
+	cursor: pointer;
+}
+
+/* Block: Modal */
+.modal {
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-radius: 0.6em;
+	border: 0;
+	outline: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.5s, visibility 0s linear 0.5s;
+}
+
+/* Active state */
+.modal--active {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+
+/* Image preview modal modifier */
+.modal--image-preview {
+  /* any specific styling for image preview */
+}
+
+/* Overlay element */
+.modal__overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 998;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.5s, visibility 0s linear 0.5s;
+}
+
+/* Active overlay */
+.modal__overlay--active {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+
+/* Wrapper inside modal */
+.modal__wrapper {
+	padding: 1.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 1em;
+	border-radius: 0.6em;
+	min-width: 20em;
+}
+
+/* Header inside wrapper */
+.modal__header {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4em;
+}
+
+/* Title element */
+.modal__title {
+	font-size: 1.2rem;
+	color: var(--gray-700);
+	font-weight: 600;
+}
+
+/* Description element */
+.modal__description {
+	color: var(--gray-500);
+	font-weight: 500;
+	font-size: 0.9rem;
+}
+
+/* Form inside modal */
+.modal__form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+}
+
+/* Field inside form */
+.modal__field {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.4em;
+}
+
+/* Input inside field */
+.modal__input {
+	flex: 1;
+	border: 1px solid var(--gray-300);
+	outline: 0;
+	border-radius: 0.4em;
+	padding: 0.5em;
+}
+
+.modal__input:focus-within,
+.modal__input:hover {
+	border: 1px solid var(--teal-500);
+}
+
+/* Actions container */
+.modal__actions {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 0.4em;
+}

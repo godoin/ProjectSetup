@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Website Title</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <!-- SEO Meta -->
+    <link rel="canonical" href="">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- Meta Tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Site Meta -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content=""/>
+    <meta property="og:url" content=""/>
+    <!-- <meta property="og:image" content=""/> -->
+
+    <!-- LinkedIn Meta -->
+    <meta property="linkedin:title" content="">
+    <meta property="linkedin:description" content="">
+    <meta property="linkedin:image" content="">
+    <meta property="linkedin:url" content="">
+    <meta property="linkedin:site_name" content="">
+    <meta property="linkedin:type" content="">
+
+    <!-- Security Meta -->
+    <meta http-equiv="Content-Security-Policy"
+        content="
+            default-src 'self';
+            script-src 'self' 'unsafe-inline';
+            style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+            font-src 'self' https://fonts.gstatic.com;
+            img-src 'self' data:;
+            connect-src 'self';
+            media-src 'self';
+            object-src 'none';
+            base-uri 'self';
+            frame-ancestors 'none';
+        "
+    />
+
+    <meta http-equiv="Permissions-Policy"
+        content="
+            camera=(), 
+            microphone=(), 
+            geolocation=(), 
+            interest-cohort=()
+        "
+    />
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/assets/css/index.css" type="text/css" fetchpriority="high">
+    <link rel="stylesheet" href="/assets/css/global.css" type="text/css" fetchpriority="high">
+    <link rel="stylesheet" href="/assets/css/common.css" type="text/css" fetchpriority="high">
+    <link rel="stylesheet" href="/assets/css/layout.css" type="text/css" fetchpriority="high">
+    
+    <!-- Prefetch CSS Links -->
+    <link rel="prefetch" href="/assets/css/index.css" as="style" fetchpriority="low">
+
+    <!-- Prefetch HTML Links -->
+    <link rel="prefetch" href="index.html" as="document" fetchpriority="low">
+
+</head>
+
+<body>
+    <div class="loader" id="loader">
+        <div class="loader__dot" id="loader-dot"></div>
+    </div>
+
+    <div class="layout" id="content">
+        
+        <nav class="nav">
+            <div class="nav__left">
+                <a href="">
+                    <picture class="image">
+                        <source srcset="" type="image/webp">
+                        <img 
+                            loading="eager" 
+                            role="presentation" 
+                            src="" 
+                            decoding="sync"
+                            fetchpriority="high"
+                            sizes=""/>
+                    </picture>
+                </a>
+
+                <ul class="nav__list">
+                    <li class="nav__item nav__item--has-menu">
+                        <button class="button button__ghost">Nav Item</button>
+
+                        <div class="nav__mega-menu">
+                            <div class="nav__mega-menu-title">
+
+                                <div class="nav__mega-menu-title-content">
+                                    <span class="nav_mega-menu-title">Title</span>
+                                    <p class="nav__mega-menu-description">
+                                        Description
+                                    </p>
+                                </div>
+                                
+                            </div>
+
+
+                    <li class="nav__item nav__item--has-menu">
+                        <button class="button button__ghost">Nav Item</button>
+
+                        <div class="nav__mega-menu">
+                            <div class="nav__mega-menu-title">
+
+                                <div class="nav__mega-menu-title-content">
+                                    <title class="nav__mega-menu-title">Title</title>
+                                    <p class="nav__mega-menu-description">
+                                        Description
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="nav__mega-menu-items">
+                                
+                                <div class="nav__mega-menu-list">
+                                    <span class="nav__mega-menu-list-title">Product Header</span>
+                                    <ul class="nav__mega-menu-list-group">
+                                        <li><a href="" class="nav__mega-menu-link">Product Item</a></li>
+                                        <li><a href="" class="nav__mega-menu-link">Product Item</a></li>
+                                        <li><a href="" class="nav__mega-menu-link">Product Item</a></li>
+                                        <li><a href="" class="nav__mega-menu-link">Product Item</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="" class="nav__link nav__link--">
+                            <span class="nav__text">Nav Item</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__right">
+                <div class="nav__list">
+                    <button class="button button__ghost">
+                        <img src="search.svg" alt="Search" width="24" height="24">
+                    </button>
+                    <button class="button button--primary">
+                        <span class="button button_text">Sign In</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="page page--home">
+            <section class="hero">
+                <div class="hero__content">
+                    <div class="hero__title-group">
+                        <h1 class="hero__title">Insert Title</h1>
+                        <p class="hero__subtitle">Insert Subtitle</p>
+                    </div>
+
+                    <div class="hero__actions hero__actions--top">
+                        <button class="button button--primary">Get Started</button>
+                        <button class="button button-outline">Laern More</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <section class="clients"></section>
+    </div>
+    <!-- JS Link -->
+    <script rel="preload" src="assets/js/index.js" type="module" fetchpriority="high"></script>
+    <script rel="preload" src="assets/js/loading.js" type="module" fetchpriority="high"></script>
+    <script rel="preload" src="assets/js/prefetching.js" type="module" fetchpriority="high"></script>
+    <script rel="preload" src="assets/js/eventHandlers.js" type="module" fetchpriority="high"></script>
+    <script rel="prefetch" src="assets/js/observer.js" type="module" fetchpriority="low"></script>
+</body>
+</html>
