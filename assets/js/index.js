@@ -3,6 +3,10 @@ import { SectionObserver } from "./ui/observer.js";
 import { PreFetcher } from "./ui/prefetching.js";
 import { MenuToggle } from "./ui/menuToggle.js";
 
+
+/**
+ * Main entry point for initializing frontend UI components
+ */
 document.addEventListener("DOMContentLoaded", () => {
 	// Initialize prefetching for SPA-like navigation
 	const prefetcher = new PreFetcher();
@@ -26,7 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	menu.init();
 });
 
-// Initialize loader on window load to ensure content is fully rendered
+/**
+ * Initialize loader on window load to ensure content is fully rendered
+ */
 window.addEventListener("load", () => {
 	const loader = new Loader({
 		delay: 4000,

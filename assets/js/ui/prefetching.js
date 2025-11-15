@@ -1,10 +1,27 @@
+/**
+ * prefetching.js
+ * PreFetcher class for SPA-like page prefetching and dynamic content updates
+ */
 export class PreFetcher {
-	constructor({ mainSelector = "main", navSelector = ".nav-item a" } = {}) {
+	/**
+	 * Returns a new PreFetcher instance
+	 * @param {*} param0 
+	 * @returns {PreFetcher} PreFetcher instance
+	 */
+	constructor({ 
+		mainSelector = "main", 
+		navSelector = ".nav-item a" 
+	} = {}) {
 		this.mainSelector = mainSelector;
 		this.navSelector = navSelector;
 		this.cachedPages = {};
 	}
 
+	/**
+	 * Updates the active state of navigation items based on the target URL
+	 * @param {*} targetUrl 
+	 * @returns {void}
+	 */
 	updateNavbarActive(targetUrl) {
 		document.querySelectorAll(this.navSelector).forEach((item) => {
 			const link = item;
@@ -13,6 +30,11 @@ export class PreFetcher {
 		});
 	}
 
+	/**
+	 * Updates main container styles and HTML classes based on the target URL
+	 * @param {*} targetUrl 
+	 * @returns {void}
+	 */
 	updateMainStyles(targetUrl) {
 		const main = document.querySelector(this.mainSelector);
 		const html = document.documentElement;
@@ -26,7 +48,7 @@ export class PreFetcher {
 			"kaseakas.html": "",
 		};
 
-		main.className = ""; // reset classes
+		main.className = "";
 		html.classList.remove("no-scroll");
 
 		for (const [key, className] of Object.entries(mapping)) {
@@ -39,6 +61,11 @@ export class PreFetcher {
 		}
 	}
 
+	/**
+	 * Handles link clicks, fetches the target page, updates content, and manages history
+	 * @param {*} e 
+	 * @returns {Promise<void>} Prefetches and updates content dynamically
+	 */
 	async handleLinkClick(e) {
 		e.preventDefault();
 		const link = e.currentTarget;
@@ -69,6 +96,10 @@ export class PreFetcher {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	}
 
+	/**
+	 * Initializes the prefetcher by attaching click event listeners to navigation links
+	 * @returns {void}
+	 */
 	init() {
 		document.querySelectorAll(this.navSelector).forEach((link) => {
 			link.addEventListener("click", (e) => this.handleLinkClick(e));
